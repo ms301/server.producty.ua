@@ -1,0 +1,16 @@
+[submodule "mORMot2"]
+	path = mORMot2
+	url = https://github.com/synopse/mORMot2.git
+	branch = master
+[submodule "Silpo.ua"]
+	path = Silpo.ua
+	url = https://github.com/ms301/Silpo.ua.git
+	branch = develop
+[submodule "AtbMarketApi"]
+	path = AtbMarketApi
+	url = https://github.com/ms301/AtbMarketApi.git
+	branch = develop
+[submodule "CloudAPI"]
+	path = CloudAPI
+	url = https://github.com/ms301/CloudAPI.git
+	branch = develop

@@ -1,0 +1,97 @@
+object UiShops: TUiShops
+  Align = Client
+  Size.Width = 772.000000000000000000
+  Size.Height = 475.000000000000000000
+  Size.PlatformDefault = False
+  object ToolBar1: TToolBar
+    Padding.Left = 9.000000000000000000
+    Padding.Top = 9.000000000000000000
+    Padding.Right = 9.000000000000000000
+    Padding.Bottom = 9.000000000000000000
+    Size.Width = 772.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Align = Left
+      Position.X = 9.000000000000000000
+      Position.Y = 9.000000000000000000
+      TabOrder = 0
+      Text = 'Pull'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Left
+      Position.X = 89.000000000000000000
+      Position.Y = 9.000000000000000000
+      TabOrder = 1
+      Text = 'Clear'
+    end
+  end
+  object Grid1: TGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 683.000000000000000000
+    Size.Height = 413.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    RowCount = 0
+    OnGetValue = Grid1GetValue
+    Viewport.Width = 679.000000000000000000
+    Viewport.Height = 388.000000000000000000
+    object StringColumn2: TStringColumn
+      Header = 'ID'
+    end
+    object StringColumn3: TStringColumn
+      Header = 'City'
+    end
+    object StringColumn4: TStringColumn
+      Header = 'Adress'
+    end
+    object StringColumn5: TStringColumn
+      Header = 'Time'
+    end
+  end
+  object StatusBar1: TStatusBar
+    Position.Y = 453.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 772.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object ProgressBar1: TProgressBar
+      Align = Client
+      Padding.Left = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Orientation = Horizontal
+      Size.Width = 772.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      object Label1: TLabel
+        Align = Left
+        Position.X = 5.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Label1'
+        TabOrder = 66
+      end
+    end
+  end
+  object ListBox1: TListBox
+    Align = Left
+    Position.Y = 40.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 413.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnItemClick = ListBox1ItemClick
+    Viewport.Width = 85.000000000000000000
+    Viewport.Height = 409.000000000000000000
+  end
+end

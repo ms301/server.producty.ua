@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3F84B94C-033A-4770-A0A1-F5110C2A972B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="server.producty.ua.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="mORMot2\ex\ThirdPartyDemos\martin-doyle\01-StandAloneORM\src\Project01.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AtbMarketApi\AtbDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="server_producty_ua">
+        <MSBuild Projects="server.producty.ua.dproj"/>
+    </Target>
+    <Target Name="server_producty_ua:Clean">
+        <MSBuild Projects="server.producty.ua.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="server_producty_ua:Make">
+        <MSBuild Projects="server.producty.ua.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project01">
+        <MSBuild Projects="mORMot2\ex\ThirdPartyDemos\martin-doyle\01-StandAloneORM\src\Project01.dproj"/>
+    </Target>
+    <Target Name="Project01:Clean">
+        <MSBuild Projects="mORMot2\ex\ThirdPartyDemos\martin-doyle\01-StandAloneORM\src\Project01.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project01:Make">
+        <MSBuild Projects="mORMot2\ex\ThirdPartyDemos\martin-doyle\01-StandAloneORM\src\Project01.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AtbDemo">
+        <MSBuild Projects="AtbMarketApi\AtbDemo.dproj"/>
+    </Target>
+    <Target Name="AtbDemo:Clean">
+        <MSBuild Projects="AtbMarketApi\AtbDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AtbDemo:Make">
+        <MSBuild Projects="AtbMarketApi\AtbDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="server_producty_ua;Project01;AtbDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="server_producty_ua:Clean;Project01:Clean;AtbDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="server_producty_ua:Make;Project01:Make;AtbDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

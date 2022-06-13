@@ -1,0 +1,54 @@
+object UiBarcodes: TUiBarcodes
+  Align = Client
+  Size.Width = 633.000000000000000000
+  Size.Height = 420.000000000000000000
+  Size.PlatformDefault = False
+  object Grid1: TGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 633.000000000000000000
+    Size.Height = 380.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Options = [AlternatingRowBackground, Editing, ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, Tabs, Header, HeaderClick, AutoDisplacement]
+    OnGetValue = Grid1GetValue
+    Viewport.Width = 613.000000000000000000
+    Viewport.Height = 355.000000000000000000
+    object StringColumn1: TStringColumn
+      Header = 'Name'
+    end
+    object StringColumn2: TStringColumn
+      Header = 'Barcode'
+    end
+  end
+  object ToolBar1: TToolBar
+    Padding.Left = 9.000000000000000000
+    Padding.Top = 9.000000000000000000
+    Padding.Right = 9.000000000000000000
+    Padding.Bottom = 9.000000000000000000
+    Size.Width = 633.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Button1: TButton
+      Align = Left
+      Position.X = 9.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Add bar'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Left
+      Position.X = 89.000000000000000000
+      Position.Y = 9.000000000000000000
+      TabOrder = 1
+      Text = 'Delete'
+      OnClick = Button2Click
+    end
+  end
+end
